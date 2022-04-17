@@ -1,0 +1,16 @@
+[{
+    "BandId": 2,
+    "MusicStyleId": 3
+  }, {
+    "BandId": 3,
+    "MusicStyleId": 3
+  }, {
+    "BandId": 2,
+    "MusicStyleId": 1
+  }, {
+    "BandId": 3,
+    "MusicStyleId": 1
+  }, {
+    "BandId": 1,
+    "MusicStyleId": 1
+  }]

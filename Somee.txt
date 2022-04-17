@@ -1,0 +1,13 @@
+Email : sjobtgcnskyzkqxech@nthrl.com
+User: Miro347
+Password: a2iIPssd54
+
+http://www.jica.somee.com
+ftp://192.52.242.121/www.jica.somee.com
+
+Connection string:
+workstation id=JicaDatabase.mssql.somee.com;packet size=4096;user id=Miro347_SQLLogin_2;pwd=1ap79rqyz2;data source=JicaDatabase.mssql.somee.com;persist security info=False;initial catalog=JicaDatabase
+
+AdminEmailJica:
+PWD:
+

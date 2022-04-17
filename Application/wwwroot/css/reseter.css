@@ -1,0 +1,22 @@
+﻿html {
+    box-sizing: border-box;
+}
+
+*::before, *:after {
+    box-sizing: inherit;
+}
+
+*:not(html) {
+    box-sizing: inherit;
+}
+
+img, div, ul, li, ol, span, p, h1, h2, h3, h4, h5 {
+    padding: 0;
+    
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}

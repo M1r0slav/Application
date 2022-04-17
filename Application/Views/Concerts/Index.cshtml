@@ -1,0 +1,51 @@
+﻿@model ICollection<Concert>
+@{
+    ViewData["Title"] = Global.Titles.Concerts;
+}
+
+@section Styles{
+        <link rel="stylesheet" href="~/css/home/index.css" />
+}
+<div class="prod-index">
+
+    <h1> All Concerts</h1>
+
+    <div class="container">
+
+        <ul class="d-flex justify-content-between text-dark flex-wrap align-content-stretch"> 
+       @for (var i = 0; i < 10; i++)
+      {         
+  
+            @foreach (Concert concert in Model)
+            {
+             <li class=" unstyled mb-4">
+                <div class="card" style="width: 18rem;background-color:yellow" >
+                  <img src="@concert.PosterAddress" class="card-img-top" alt="concert-pic">
+                  <div class="card-body">
+                    <h5 class="card-title">@concert.Title</h5>
+                    @foreach (var show in concert.Shows)
+                    {
+                    <p class="card-text"><i class="fas fa-map-marked-alt"></i> @show.Place | <i class="fas fa-calendar-times"></i> @show.Date.ToString("dd-MM-yy")</p>
+                   @* <p class="card-text"><i class="fas fa-calendar-times"></i> @show.Date.ToString("dd-MM-yy")</p> *@                       
+                    }
+                    <a asp-action="Details" asp-route-id="@concert.Id" class="btn btn-primary">View More</a>
+                  </div>
+                </div>
+            </li>
+   }
+
+       }
+    </ul>
+
+
+
+
+    </div>
+
+    @if (User.IsInRole(Global.AdminRoleName))
+    {
+
+        <a class="btn btn-info" asp-area="" asp-controller="Concerts" asp-action="Create">Add new Concert</a>
+    }
+
+</div>

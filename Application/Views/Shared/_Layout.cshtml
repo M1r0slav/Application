@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @Global.ApplicationName</title>
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="~/css/reseter.css" />
+    <link rel="stylesheet" href="~/css~/css/typography.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="icon" type="image/png" href="~/quitar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 w-100">
+            <div class="container">
+                <a class="@((ViewData["Title"]!=null && ViewData["Title"].Equals(Global.Titles.Home))?
+                                "disabled btn btn-outline-secondary text-danger":"nav-link text-warning")" asp-area="" asp-controller="Home" asp-action="Index">@Global.ApplicationName</a>
+
+                <a class="@((ViewData["Title"]!=null && ViewData["Title"].Equals(Global.Titles.Concerts))?
+                                "disabled btn btn-outline-secondary":"nav-link text-warning")" asp-area="" asp-controller="Concerts" asp-action="Index">My Concerts</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="@((ViewData["Title"]!=null && ViewData["Title"].Equals(Global.Titles.Home))?
+                                "disabled btn btn-outline-secondary":"nav-link text-warning")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+
+                            @if (ViewData["Title"] != null && ViewData["Title"].Equals(Global.Titles.Privacy))
+                            {
+                                <a class="disabled btn btn-outline-secondary" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-warning" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            }
+                        </li>
+                    </ul>
+                    @if (User.IsInRole(Global.AdminRoleName))
+                    {
+                        <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">Admin Panel</a>
+                    }
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Jica - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

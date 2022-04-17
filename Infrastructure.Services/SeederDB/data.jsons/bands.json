@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "BandCoverJPG": "https://i.ytimg.com/vi/pX93gmyya7c/maxresdefault.jpg",
+    "Name": "AC-DC",
+    "Participants": "Ангъс Маккинан Йънг-Водеща китара|Брайън Джонсън- Вокал",
+    "Description": "Ей Си/Ди Си е рок група създадена в Сидни, Австралия през ноември 1973 г. от родените в Шотландия братя Малкълм Йънг и Ангъс Йънг. Бандата е една от най-влиятелните в стила хардрок; изградила своята популярност благодарение на семпли мелодии, състоящи се от три акорда."
+  },
+  {
+    "Id": 2,
+    "BandCoverJPG": "https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/Otava-yo-1-byTimur-Sigidin.jpg?resize=500%2C281&ssl=1",
+    "Name": "Otava",
+    "Participants": "Алексей Белкин-Вокал|Петър Сергеев-Бас Барабан",
+    "Description": "описание на бандата"
+  },
+  {
+    "Id": 3,
+    "BandCoverJPG": "https://c4.wallpaperflare.com/wallpaper/930/189/202/5bf50d477815a-wallpaper-preview.jpg",
+    "Name": "Linkin Park",
+    "Participants": "Майк Шинода-вокал|Роб Бардън-барабани|Джоузеф Хан-диджей",
+    "Description": "Линкин Парк е американска музикална група. Повечето критици ги определят като ню метъл. Linkin Park добавят, че главната им цел е да създават нещо между рок и рап. Първият им албум се казва „Hybrid Theory“, като издаден."
+  }
+]
