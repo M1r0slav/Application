@@ -8,7 +8,7 @@ namespace Common
 
         public static string AdminRoleName { get; } = "Admin";
 
-        public static AppTitles Titles = new AppTitles { Home = "Jica", Privacy = "Privacy", Concerts = "All Concerts", ConcertsDetails = "Details of Concerts" };
+        public static AppTitles Titles = new AppTitles { Home = "Jica", Privacy = "Privacy", Concerts = "Concerts", ConcertsDetails = "Details of Concerts" };
 
         public static string SQLString => sqlConnectionStrings[connectionStringToUse];
 
