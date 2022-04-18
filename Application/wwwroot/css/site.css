@@ -64,8 +64,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: black;
-    
+
 }
 main {
     max-height: 80vh;
@@ -108,4 +107,8 @@ nav.navbar > div > a:hover {
 
 .selected-tab {
     color: orangered;
+}
+container{
+    background-color: black;
+    opacity: 0.6;
 }
