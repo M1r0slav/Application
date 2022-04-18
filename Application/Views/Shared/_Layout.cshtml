@@ -33,10 +33,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="@((ViewData["Title"]!=null && ViewData["Title"].Equals(Global.Titles.Home))?
-                                "disabled btn btn-outline-secondary":"nav-link text-warning")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
+                        
                         <li class="nav-item">
 
                             @if (ViewData["Title"] != null && ViewData["Title"].Equals(Global.Titles.Privacy))
